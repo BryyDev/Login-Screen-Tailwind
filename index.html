@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Login</title>
+  <link rel="stylesheet" crossorigin href="/Login-Screen-Tailwind/assets/index-BjPA7VT_.css">
+</head>
+<!-- 
+  No celular/tablet: flex-col (itens empilhados) e fundo branco.
+  No PC (lg:): flex-row (itens lado a lado) e fundo cinza claro.
+-->
+<body class="flex flex-col lg:flex-row min-h-screen w-full bg-white lg:bg-slate-100">
+
+  <!-- 
+    hidden: Some no celular e tablet.
+    lg:block lg:w-1/2: Aparece e ocupa 50% da tela apenas no PC.
+  -->
+  <div class="hidden lg:block lg:w-1/2 bg-slate-900 relative overflow-hidden">
+    <img src="/Login-Screen-Tailwind/assets/nagi-BHWiaf9C.webp" alt="cardume de peixes" dir="rtl" class="absolute inset-0 w-full h-full object-cover opacity-80 border-s-2 border-r-slate-700">
+  </div>
+
+  <!-- 
+    w-full: Ocupa 100% no celular.
+    lg:w-1/2: Ocupa 50% no PC.
+    justify-center e items-center: Centraliza o formulário na tela.
+    lg:bg-transparent: Deixa o fundo transparente no PC para o card se destacar.
+  -->
+  <div class="w-full lg:w-1/2 min-h-screen flex flex-col items-center justify-center p-6 md:p-12 bg-white lg:bg-transparent">
+  
+    <!-- 
+      No celular: É transparente (sem fundo e sem sombra), se misturando com a tela.
+      No PC (lg:): Ganha fundo branco, sombra, cantos arredondados e borda.
+    -->
+    <div class="w-full max-w-md text-slate-900 lg:bg-white lg:p-10 lg:rounded-2xl lg:shadow-xl lg:border lg:border-slate-200">
+      
+      <form class="flex flex-col gap-6">
+        
+        <div class="flex flex-col items-start gap-2 mb-2">
+          <p class="font-medium text-base text-slate-600">Bem vindo de volta 🐟</p>
+          <h1 class="font-bold text-2xl lg:text-3xl">Preencha os dados</h1>
+        </div>
+        
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <label for="email" class="font-medium text-sm text-slate-700">Digite o email</label>
+            <input type="email" placeholder="ex: email@email.com" id="email" required class="border-2 border-[#E8E8E8] px-4 py-3 rounded-lg w-full bg-[#F7FAFC] outline-none focus:border-blue-500 transition-colors">
+          </div>
+          
+          <div class="flex flex-col gap-2">
+            <label for="senha" class="font-medium text-sm text-slate-700">Digite a senha</label>
+            <input type="password" placeholder="Sua senha" id="senha" required class="border-2 border-[#E8E8E8] px-4 py-3 rounded-lg w-full bg-[#F7FAFC] outline-none focus:border-blue-500 transition-colors">
+          </div>
+        </div>
+        
+        <div class="flex flex-row justify-between items-center w-full mt-2">
+          <label class="font-medium text-sm text-slate-700 flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 accent-blue-500">  
+            Lembre de mim
+          </label>
+          
+          <a href="#" class="text-blue-500 text-sm hover:underline">Esqueceu sua senha?</a>
+        </div>
+        
+        <div class="flex flex-col gap-4 mt-4">
+          <button type="submit" class="flex items-center justify-center px-8 py-3.5 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Entrar na conta</button>
+          <button type="button" class="flex items-center justify-center px-8 py-3.5 bg-[#1A202C] text-white font-medium rounded-lg hover:bg-slate-800 transition-colors">Faça login com o Google</button>
+        </div>
+        
+        <div class="mt-6 flex justify-center">
+          <p class="font-medium text-sm text-slate-600">Não tem uma conta? <a href="#" class="text-blue-500 hover:underline font-semibold">Cadastre-se</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
