@@ -1,2 +1,3 @@
 # Tela de Login Tailwind/CSS
-Uma tela de login que eu desenvolvi junto com o aprendizado de Tailwind (Mobile First)
+
+## Feita com Mobile First como objeto de estudo para Tailwind-CSS
